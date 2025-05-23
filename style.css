@@ -1,0 +1,202 @@
+body {
+  font-family: monospace;
+}
+
+/* Navigation Bar */
+
+#home {
+  background-color: #c2c2c2;
+  padding-bottom: 1cm;
+  margin-left: -1cm;
+  margin-right: -1cm;
+  margin-top: -1cm;
+  padding-top: 2cm;
+  padding-bottom: 1.5cm;
+  height: 5mm;
+}
+
+.topmenu {
+  color: black;
+  margin: 10px;
+  padding: 20px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.topmenu:hover {
+  color: white;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.topdiv {
+  font-weight: bold;
+  float: right;
+  padding-right: 1cm;
+}
+
+.profile_name {
+  float: left;
+  padding-left: 2cm;
+}
+
+.profile_name .contact_info {
+  font-size: 15px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.contact_info img {
+  width: 20px;
+  margin-right: 10px;
+  float: left;
+}
+
+/* Titles */
+
+h2 {
+  text-align: justify;
+  font-size: 50px;
+  text-align: center;
+  float: left;
+  color: #c2c2c2;
+  margin: 30px;
+  margin-left: 60px;
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+
+.introduction {
+  text-align: justify;
+  font-size: 30px;
+  text-align: center;
+  float: left;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  animation-duration: 5s;
+  position: relative;
+}
+
+/* Used in the About Me sections */
+
+.container {
+  display: flex;
+}
+
+/* About Me */
+
+.about-me {
+  display: flex;
+  align-items: center;
+}
+
+#about-me h1 {
+  font-size: 65px;
+  margin-top: 90px;
+  color: #c2c2c2;
+}
+
+#about-me p {
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+  margin-top: -1cm;
+}
+
+.profile_image {
+  width: 550px;
+  height: fit-content;
+  vertical-align: middle;
+  margin: 5px;
+}
+
+/* Skills */
+
+.all_skills {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-flow: wrap;
+}
+
+.skill {
+  border: 1px solid gray;
+  display: block;
+  border-radius: 6px;
+  text-align: center;
+  margin: 50px;
+  padding: 10px;
+  width: 2in;
+  box-shadow: 0 3px 10px gray;
+}
+
+.skill img {
+  height: 45px;
+  align-items: center;
+}
+
+.skill h6 {
+  align-items: center;
+  font-size: 15px;
+  margin-block-start: 8px;
+  margin-block-end: 5px;
+  font-weight: bold;
+}
+
+.skill p {
+  align-items: center;
+  font-size: 15px;
+  color: black;
+  margin-block-start: 5px;
+  margin-block-end: 5px;
+}
+
+.flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Projects */
+
+.projects-container {
+  margin-top: 30px;
+  margin-left: 60px;
+}
+
+.projects-container hr {
+  border: 1px solid lightgray;
+  width: 75%;
+  margin-left: 5cm;
+}
+
+.project-card {
+  margin: 0 15px 15px 30px;
+  padding-bottom: 5px;
+}
+
+.project-card h3 {
+  font-size: 25px;
+  margin-left: 30px;
+}
+
+.project-card li {
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+/* Scroll to Top Button */
+
+.iconbutton {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+  cursor: pointer;
+}
