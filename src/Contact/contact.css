@@ -1,0 +1,68 @@
+footer {
+  background-color: var(--color-primary);
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.95rem;
+}
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+footer .contact_info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  color: var(--color-background);
+  transition: transform 0.3s ease;
+}
+
+footer .contact_info img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+
+footer .contact_info img:hover {
+  transform: scale(1.15);
+}
+
+footer .contact_info a,
+footer .contact_info span {
+  color: var(--color-background);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  word-break: break-word;
+}
+
+footer .contact_info a:hover {
+  background-color: var(--color--background);
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding-inline: 1rem;
+  }
+
+  footer .contact_info {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  footer .contact_info img {
+    width: 20px;
+    height: 20px;
+  }
+}
