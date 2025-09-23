@@ -11,7 +11,7 @@
 
 .modal-content {
   background: var(--color-background);
-  color: var(--color-text, #333);
+  color: var(--color-primary);
   border-radius: 10px;
   padding: 2rem;
   width: 100%;
@@ -47,4 +47,59 @@
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    max-height: 90vh;
+    height: auto;
+    padding: 1.5rem 1rem;
+    width: 100%;
+    margin-top: 160px;
+    border-radius: 12px;
+  }
+
+  .close-modal {
+    top: 10px;
+    right: 12px;
+    font-size: 1.8rem;
+  }
+
+  .modal-content h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .modal-content h4 {
+    font-size: 1.2rem;
+  }
+
+  .modal-content p,
+  .modal-content li {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+.btn-accent {
+  padding: 0.45rem 1.1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid var(--color-accent);
+  color: var(--color-muted-blue);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-accent:hover {
+  background: var(--color-accent);
+  color: var(--color-surface);
+}
+
+.btn-accent:active {
+  background: var(--color-deep-teal);
+  border-color: var(--color-deep-teal);
+  color: var(--color-surface);
 }

@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
 
-    <!-- Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,55 +19,42 @@
       rel="stylesheet"
     />
 
-    <!-- Main Style -->
-    <link rel="stylesheet" href="style.css" />
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   </head>
 
   <body>
     <div id="navbar"></div>
+
     <main>
+      <div id="home"></div>
       <div id="about-me"></div>
       <div id="skills"></div>
       <div id="projects"></div>
       <div id="contact"></div>
     </main>
+
     <div id="modals"></div>
 
-    <!-- Bootstrap Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
 
-    <!-- Script Modules -->
-    <script src="src/Navbar/navbar.js"></script>
-    <script src="src/AboutMe/about.js"></script>
-    <script src="src/Skills/skills.js"></script>
-    <script src="src/Project/project.js"></script>
-    <script src="src/Project/Modal/modal.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
 
-    <!-- Load Components and Trigger Setup -->
-    <script>
+    <script defer>
       const components = [
-        {
-          id: "navbar",
-          path: "src/Navbar/navbar.html",
-          callback: window.setupNavbar,
-        },
+        { id: "navbar", path: "src/Navbar/navbar.html" },
+        { id: "home", path: "src/Home/home.html" },
         { id: "about-me", path: "src/AboutMe/about.html" },
-        {
-          id: "skills",
-          path: "src/Skills/skills.html",
-          callback: window.setupSkills,
-        },
-        {
-          id: "projects",
-          path: "src/Project/project.html",
-          callback: window.setupProjectAnimations,
-        },
+        { id: "skills", path: "src/Skills/skills.html" },
+        { id: "projects", path: "src/Project/project.html" },
         { id: "contact", path: "src/Contact/contact.html" },
-        {
-          id: "modals",
-          path: "src/Project/Modal/modal.html",
-          callback: window.setupModals,
-        },
+        { id: "modals", path: "src/Project/Modal/modal.html" },
       ];
 
       Promise.all(
@@ -79,8 +66,59 @@
             })
         )
       ).then(() => {
-        components.forEach(({ callback }) => {
-          if (typeof callback === "function") callback();
+        AOS.init({
+          duration: 1000,
+          once: true,
+          offset: 100,
+        });
+
+        const navToggle = document.getElementById("nav-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        if (navToggle && navLinks) {
+          navToggle.addEventListener("click", () => {
+            navToggle.classList.toggle("open");
+            navLinks.classList.toggle("show");
+          });
+
+          document.querySelectorAll(".topmenu").forEach((link) => {
+            link.addEventListener("click", () => {
+              navToggle.classList.remove("open");
+              navLinks.classList.remove("show");
+            });
+          });
+        }
+
+        const modalButtons = document.querySelectorAll(".open-modal-btn");
+        const closeButtons = document.querySelectorAll(".close-modal");
+        const modals = document.querySelectorAll(".modal");
+
+        modalButtons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const targetId = btn.getAttribute("data-modal");
+            const targetModal = document.getElementById(targetId);
+            if (targetModal) {
+              targetModal.classList.remove("hidden");
+              document.body.style.overflow = "hidden";
+            }
+          });
+        });
+
+        closeButtons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const modal = btn.closest(".modal");
+            modal.classList.add("hidden");
+            document.body.style.overflow = "auto";
+          });
+        });
+
+        window.addEventListener("click", (e) => {
+          modals.forEach((modal) => {
+            if (e.target === modal) {
+              modal.classList.add("hidden");
+              document.body.style.overflow = "auto";
+            }
+          });
         });
       });
     </script>

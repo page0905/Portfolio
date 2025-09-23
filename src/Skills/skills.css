@@ -56,9 +56,6 @@
 }
 
 .skill-item {
-  opacity: 0;
-  transform: translateY(60px) scale(0.95);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   background-color: var(--color-surface);
   border-radius: 1rem;
   padding: 16px 10px;
@@ -67,19 +64,12 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
-}
-
-.skill-item.in-view {
-  animation: fadeZoomIn 1.2s ease-out forwards;
-}
-
-.skill-item.hidden {
-  opacity: 0;
-  transform: translateY(60px) scale(0.95);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-item img {
-  height: 42px;
+  filter: brightness(0) saturate(0%) opacity(0.8);
+  height: 50px;
   margin-bottom: 10px;
 }
 
@@ -114,19 +104,4 @@
   opacity: 1;
   transform: none;
   transition: none;
-}
-
-@keyframes fadeZoomIn {
-  0% {
-    opacity: 0;
-    transform: translateY(60px) scale(0.9);
-  }
-  60% {
-    opacity: 1;
-    transform: translateY(-4px) scale(1.03);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
 }
