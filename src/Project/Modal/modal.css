@@ -10,16 +10,19 @@
 }
 
 .modal-content {
+  margin-top: 60px;
   background: var(--color-background);
   color: var(--color-primary);
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 2rem;
   width: 100%;
   max-width: 600px;
   height: 80vh;
   overflow-y: auto;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   position: relative;
+  line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
 .modal-content::-webkit-scrollbar {
@@ -35,10 +38,10 @@
   position: absolute;
   top: 12px;
   right: 16px;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   cursor: pointer;
   color: var(--color-primary, #6e6e6e);
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .close-modal:hover {
@@ -49,39 +52,45 @@
   display: none;
 }
 
-@media (max-width: 768px) {
-  .modal-content {
-    max-height: 90vh;
-    height: auto;
-    padding: 1.5rem 1rem;
-    width: 100%;
-    margin-top: 160px;
-    border-radius: 12px;
-  }
-
-  .close-modal {
-    top: 10px;
-    right: 12px;
-    font-size: 1.8rem;
-  }
-
-  .modal-content h2 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-  }
-
-  .modal-content h4 {
-    font-size: 1.2rem;
-  }
-
-  .modal-content p,
-  .modal-content li {
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
+/* Typography refinement */
+.modal-content h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
 }
 
+.modal-content h4 {
+  margin-top: 1.8rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-accent, #3a7474);
+  border-left: 3px solid var(--color-accent, #3a7474);
+  padding-left: 0.6rem;
+}
+
+.modal-content p {
+  margin-bottom: 1.2rem;
+  font-size: 0.98rem;
+  color: var(--color-primary);
+}
+
+.modal-content ul {
+  margin: 0.5rem 0 1.3rem 1.2rem;
+  padding-left: 0.5rem;
+}
+
+.modal-content li {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+/* Buttons */
 .btn-accent {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   padding: 0.45rem 1.1rem;
   border-radius: 6px;
   font-size: 0.9rem;
@@ -96,10 +105,44 @@
 .btn-accent:hover {
   background: var(--color-accent);
   color: var(--color-surface);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
 .btn-accent:active {
   background: var(--color-deep-teal);
   border-color: var(--color-deep-teal);
   color: var(--color-surface);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modal-content {
+    max-height: 90vh;
+    height: auto;
+    padding: 1.5rem 1rem;
+    margin-top: 160px;
+    border-radius: 12px;
+  }
+
+  .close-modal {
+    top: 10px;
+    right: 12px;
+    font-size: 1.8rem;
+  }
+
+  .modal-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .modal-content h4 {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+  }
+
+  .modal-content p,
+  .modal-content li {
+    font-size: 0.94rem;
+    line-height: 1.55;
+  }
 }

@@ -3,6 +3,7 @@
   <div class="modal-content">
     <span class="close-modal">&times;</span>
     <h2>MSC Health</h2>
+
     <div class="ratio ratio-16x9 mb-4">
       <div
         id="carousel-health"
@@ -40,7 +41,6 @@
             />
           </div>
         </div>
-
         <button
           class="carousel-control-prev"
           type="button"
@@ -61,12 +61,12 @@
     </div>
 
     <p>
-      MSC Health is a full-featured healthcare web application that streamlines
-      the entire medical booking experience. From instant consultations and
-      personalized appointment scheduling to self-diagnosis and trusted health
-      education, the app delivers an intuitive and modern experience for
-      patients of all ages.
+      A comprehensive healthcare booking platform built with React. It allows
+      users to perform self checkups, instantly book consultations, manage
+      appointments, and read health-related blogs—all powered by a JSON Server
+      mock backend.
     </p>
+
     <div class="mb-4">
       <a
         href="https://github.com/page0905/MSCHealth"
@@ -90,10 +90,11 @@
         Live Demo
       </a>
     </div>
-    <h4>🔧 Tech Stack</h4>
+
+    <h4>Tech Stack</h4>
     <ul>
       <li><strong>Frontend:</strong> React, React Router, Bootstrap</li>
-      <li><strong>Backend:</strong> JSON Server</li>
+      <li><strong>Backend:</strong> JSON Server (mock REST API)</li>
       <li><strong>Deployment:</strong> GitHub Pages</li>
     </ul>
 
@@ -135,20 +136,15 @@
       </li>
     </ul>
 
-    <h4>💡 Highlights</h4>
+    <h4>Highlights</h4>
     <ul>
+      <li>End-to-end experience: discovery → consultation → feedback.</li>
       <li>
-        End-to-end user experience from discovery to consultation and feedback
+        Auto-status update for appointments (marked complete after 30 mins).
       </li>
+      <li>Separation between public and authenticated routes.</li>
       <li>
-        Role-aware access: public blog & health tips vs. private dashboard
-        features
-      </li>
-      <li>
-        Realistic booking flows, time-sensitive logic, and state management
-      </li>
-      <li>
-        Fully responsive design, clean architecture, and modular components
+        Responsive layout, modular components, and clean routing structure.
       </li>
     </ul>
   </div>
@@ -157,7 +153,8 @@
 <div id="modal-plant" class="modal hidden">
   <div class="modal-content">
     <span class="close-modal">&times;</span>
-    <h2>MSCPlant</h2>
+    <h2>MSC Plant</h2>
+
     <div class="ratio ratio-16x9 mb-4">
       <div
         id="carousel-plant"
@@ -213,36 +210,31 @@
         </button>
       </div>
     </div>
+
     <p>
-      A plant-themed online shop built for nature lovers. It offers categorized
-      product listings, filtering by pet-safe plants, and an intuitive cart
-      system. Search functionality highlights matching keywords. The app is
-      fully responsive and powered by JSON Server for data simulation.
+      A React + Redux e-commerce website for plant lovers. It provides smart
+      filtering, search highlighting, and cart management with local state
+      persistence, using JSON Server as a mock backend for product data.
     </p>
+
     <div class="mb-4">
       <a
-        href="https://github.com/page0905/plantShopping"
+        href="https://github.com/page0905/MSCPlant"
         target="_blank"
-        rel="noopener noreferrer"
         class="btn-accent me-2"
-        aria-label="Open GitHub repository"
       >
-        <i class="bi bi-github" aria-hidden="true"></i>
-        GitHub
+        <i class="bi bi-github"></i> GitHub
       </a>
-
       <a
-        href="https://page0905.github.io/plantShopping/"
+        href="https://page0905.github.io/MSCPlant/"
         target="_blank"
-        rel="noopener noreferrer"
         class="btn-accent"
-        aria-label="Open live demo"
       >
-        <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
-        Live Demo
+        <i class="bi bi-box-arrow-up-right"></i> Live Demo
       </a>
     </div>
-    <h4>🔧 Tech Stack</h4>
+
+    <h4>Tech Stack</h4>
     <ul>
       <li>
         <strong>Frontend:</strong> React, Redux Toolkit, React Router, Bootstrap
@@ -252,21 +244,21 @@
       <li><strong>Deployment:</strong> GitHub Pages</li>
     </ul>
 
-    <h4>⚙️ Key Features</h4>
+    <h4>Key Features</h4>
     <ul>
-      <li>Dynamic search with keyword highlight</li>
-      <li>Filtering by name, price, and pet-friendliness</li>
-      <li>Collapsible filter UI</li>
-      <li>Product detail modal</li>
-      <li>Shopping cart system with quantity management</li>
+      <li>Dynamic search with keyword highlighting.</li>
+      <li>Filter by category, price, and pet-friendly tag.</li>
+      <li>Modal view for detailed product info and quick add-to-cart.</li>
+      <li>Redux-powered cart with quantity update & auto-removal.</li>
+      <li>Contact form with local success feedback.</li>
     </ul>
 
-    <h4>💡 Highlights</h4>
+    <h4>Highlights</h4>
     <ul>
-      <li>Soft green UI inspired by nature</li>
-      <li>Fully responsive layout</li>
-      <li>Fast and lightweight</li>
-      <li>Full CRUD simulation with JSON Server</li>
+      <li>Clean, nature-inspired UI.</li>
+      <li>Optimized for both desktop and mobile.</li>
+      <li>Full CRUD simulation via JSON Server.</li>
+      <li>Structured with reusable components and clear data flow.</li>
     </ul>
   </div>
 </div>
@@ -274,7 +266,8 @@
 <div id="modal-restaurant" class="modal hidden">
   <div class="modal-content">
     <span class="close-modal">&times;</span>
-    <h2>MSCRestaurant</h2>
+    <h2>MSC Restaurant</h2>
+
     <div class="ratio ratio-16x9 mb-4">
       <div
         id="carousel-restaurant"
@@ -330,11 +323,13 @@
         </button>
       </div>
     </div>
+
     <p>
-      A clean, mobile-friendly landing page for a restaurant. Includes 6 main
-      sections: Home, Menu, About, Gallery, Contact, and Book a Table. Built
-      with React and Bootstrap for quick layout and responsive design.
+      A modern React single-page website for restaurants featuring dynamic
+      tabbed menu, gallery, contact, and booking sections. Includes smooth
+      scrolling and AOS animations for an elegant user experience.
     </p>
+
     <div class="mb-4">
       <a
         href="https://github.com/page0905/Restaurant"
@@ -359,36 +354,37 @@
       </a>
     </div>
 
-    <h4>🔧 Tech Stack</h4>
+    <h4>Tech Stack</h4>
     <ul>
-      <li><strong>Frontend:</strong> React, Bootstrap 5, CSS Module</li>
+      <li><strong>Frontend:</strong> React, Bootstrap 5, AOS, Swiper</li>
       <li><strong>Backend:</strong> JSON Server</li>
       <li><strong>Deployment:</strong> GitHub Pages</li>
     </ul>
 
-    <h4>⚙️ Key Features</h4>
+    <h4>Key Features</h4>
     <ul>
-      <li>Tabbed menu section with glow hover effects</li>
-      <li>Grid-style image gallery</li>
-      <li>Online booking form</li>
-      <li>Sticky navigation bar</li>
-      <li>Smooth scrolling across sections</li>
+      <li>Tabbed food menu with hover animations.</li>
+      <li>Responsive image gallery (food/drink tabs).</li>
+      <li>Contact form with Google Map embed.</li>
+      <li>Online booking form with input validation.</li>
+      <li>Sticky header and smooth section scroll.</li>
     </ul>
 
-    <h4>💡 Highlights</h4>
+    <h4>Highlights</h4>
     <ul>
-      <li>Fully responsive and mobile-first</li>
-      <li>Clean and modern aesthetic</li>
-      <li>Lightweight and performant</li>
+      <li>Fully responsive, mobile-first layout.</li>
+      <li>Elegant, lightweight, and performance-optimized.</li>
+      <li>Reusable hooks for scroll & mobile menu logic.</li>
+      <li>Dynamic JSON data loading for menu items.</li>
     </ul>
   </div>
 </div>
 
-<!-- 🧑‍💻 Portfolio Modal -->
 <div id="modal-portfolio" class="modal hidden">
   <div class="modal-content">
     <span class="close-modal">&times;</span>
     <h2>Personal Portfolio</h2>
+
     <div class="ratio ratio-16x9 mb-4">
       <div
         id="carousel-portfolio"
@@ -439,9 +435,9 @@
     </div>
 
     <p>
-      A modern and responsive portfolio website built using semantic HTML, CSS,
-      and JavaScript. The site showcases personal projects, skills, and contact
-      information with smooth animations and a minimalist pastel theme.
+      A minimalist and responsive personal portfolio built with HTML, CSS, and
+      JavaScript. It showcases projects, skills, and contact info using smooth
+      animations, AOS effects, and modal-based project previews.
     </p>
 
     <div class="mb-4">
@@ -468,27 +464,27 @@
       </a>
     </div>
 
-    <h4>🔧 Tech Stack</h4>
+    <h4>Tech Stack</h4>
     <ul>
       <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
-      <li><strong>Libraries:</strong> AOS (Animate on Scroll)</li>
+      <li><strong>Library:</strong> AOS (Animate on Scroll)</li>
       <li><strong>Deployment:</strong> GitHub Pages</li>
     </ul>
 
-    <h4>⚙️ Key Features</h4>
+    <h4>Key Features</h4>
     <ul>
-      <li>Modular structure with HTML component loading</li>
-      <li>Smooth scroll and responsive navigation with hamburger menu</li>
-      <li>Project section with animated zig-zag cards and modal details</li>
-      <li>Clean layout: Home, About Me, Skills, Projects, Contact</li>
+      <li>Dynamic project modals with image carousel.</li>
+      <li>Responsive layout with smooth scrolling navigation.</li>
+      <li>Section-based animations and theme transitions.</li>
+      <li>Componentized HTML for easy content updates.</li>
     </ul>
 
-    <h4>💡 Highlights</h4>
+    <h4>Highlights</h4>
     <ul>
-      <li>No frameworks — built with pure HTML/CSS/JS</li>
-      <li>Fully responsive, mobile-first design</li>
-      <li>Custom pastel dark theme and animated transitions</li>
-      <li>Easily extendable and maintainable structure</li>
+      <li>No framework — built purely with HTML/CSS/JS.</li>
+      <li>Optimized for mobile and tablet devices.</li>
+      <li>Elegant pastel theme and clean codebase.</li>
+      <li>Modular and easily maintainable structure.</li>
     </ul>
   </div>
 </div>
